@@ -1,341 +1,585 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/QL_logo.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fjalla One"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuatreLabs</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./assets/QL_logo.svg" />
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla One">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-  </script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QuatreLabs</title>
-</head>
-
-<body>
-  <div id="app">
-
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="position:absolute;right:0;left:0;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="./assets/QuatreLabs.svg" width="200" height="48">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#aboutus">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#team">Team</a>
-            </li>
-          </ul>
+  <body>
+    <div id="app">
+      <!-- NAVBAR -->
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="position: absolute; right: 0; left: 0"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./assets/QuatreLabs.svg" width="200" height="48" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#aboutus">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">Team</a>
+              </li>
+            </ul>
             <!-- <button class="btn btn-outline-primary" type="submit">Get in Touch</button> -->
-            <button class="btn btn-outline-primary" id="contactus" onclick="toggleHidden()">Get In Touch <i class="far fa-paper-plane"></i></button>
+            <button
+              class="btn btn-outline-primary"
+              id="contactus"
+              onclick="toggleHidden()"
+            >
+              Get In Touch <i class="far fa-paper-plane"></i>
+            </button>
+          </div>
         </div>
-      </div>
-    </nav>
-    <div id="hidden">
-      <div class="container-hidden">
-        <!-- <span class="iconify" data-icon="mdi-close-circle" data-inline="false" onclick="closeDiv()" id="close"></span> -->
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" onclick="closeDiv()" id="close" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M16 2C8.2 2 2 8.2 2 16s6.2 14 14 14s14-6.2 14-14S23.8 2 16 2zm0 26C9.4 28 4 22.6 4 16S9.4 4 16 4s12 5.4 12 12s-5.4 12-12 12z" fill="#fff"/><path d="M21.4 23L16 17.6L10.6 23L9 21.4l5.4-5.4L9 10.6L10.6 9l5.4 5.4L21.4 9l1.6 1.6l-5.4 5.4l5.4 5.4z" fill="#fff"/></svg>
-        <h1 style="color: white; font-family: League;">Be The First To Notified.</h1>
-        <!-- <div class="form-group col-3">
+      </nav>
+      <div id="hidden">
+        <div class="container-hidden">
+          <!-- <span class="iconify" data-icon="mdi-close-circle" data-inline="false" onclick="closeDiv()" id="close"></span> -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            onclick="closeDiv()"
+            id="close"
+            focusable="false"
+            width="1em"
+            height="1em"
+            style="
+              -ms-transform: rotate(360deg);
+              -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+            "
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 32 32"
+          >
+            <path
+              d="M16 2C8.2 2 2 8.2 2 16s6.2 14 14 14s14-6.2 14-14S23.8 2 16 2zm0 26C9.4 28 4 22.6 4 16S9.4 4 16 4s12 5.4 12 12s-5.4 12-12 12z"
+              fill="#fff"
+            />
+            <path
+              d="M21.4 23L16 17.6L10.6 23L9 21.4l5.4-5.4L9 10.6L10.6 9l5.4 5.4L21.4 9l1.6 1.6l-5.4 5.4l5.4 5.4z"
+              fill="#fff"
+            />
+          </svg>
+          <h1 style="color: white; font-family: League">
+            Be The First To Notified.
+          </h1>
+          <!-- <div class="form-group col-3">
           <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="" required>
           <button class="btn" onclick="sendNotification()" id="notify">Get Notified</button>
         </div> -->
-        <div class="m-3">
-          <input type="email" class="form-control" id="email" placeholder="Your email address" required>
-          <button class="btn btn-outline-primary" onclick="sendNotification()" id="notify">Get Notified</button>
+          <div class="m-3">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Your email address"
+              required
+            />
+            <button
+              class="btn btn-outline-primary"
+              onclick="sendNotification()"
+              id="notify"
+            >
+              Get Notified
+            </button>
+          </div>
+          <br />
+          <a href="#contact" onclick="callContact()"
+            >Need to Describe more, Please Click me</a
+          >
+          <div class="subscribe-lottie">
+            <lottie-player
+              src="./assets/subscribe.json"
+              class="lottie"
+              background="transparent"
+              speed="1"
+              style="width: 350px; height: 400px"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+          <audio id="audio" src="./assets/click.wav"></audio>
         </div>
-        <br>
-        <a href="#contact" onclick="callContact()">Need to Describe more, Please Click me</a>
-        <div class="subscribe-lottie">
-        <lottie-player src="./assets/subscribe.json" class="lottie" background="transparent" speed="1" style="width: 350px; height: 400px;"
-          loop autoplay></lottie-player></div>
-        <audio id="audio" src="./assets/click.wav"></audio>
       </div>
-    </div>
 
-    <!-- TAGLINE -->
-    <div id="tagline-section" style="height: 100vh;">
-      <div class="tagline">
-        <p><span class="tag-mid">ENVISION. </span><span class="tag-mid" style="color: white; ">INNOVATE. </span>
-          <span class="tag-mid">TRANSFORM.</span></p>
-      </div>
-    </div>
-  </div>
-  <!-- VISION -->
-  <div class="container-fluid p-5" style="background-color: #d6e6f2;">
-    <h1 class="text-center mt-3 mb-5" style="font-size: 60px; font-family: League;">Our <span style="color: #307EFF;">V</span>ision</h1>
-    <div class="container-vision">
-      <div class="vision-vision">
-        <div class="content-vision">
-          <div class="vision-body">
-            <h3 class="text-center">Quality</h3>
-            <img class="vision-img-top" src="./assets/quality.png" alt="Card image cap">
-            <p class="vision-text text-center">Cutting edge <span style="color: #307EFF;">Quintessential
-                solutions</span> at the forefront of Technology.</p>
-          </div>
-        </div>
-      </div>
-      <div class="vision-vision">
-        <div class="content-vision">
-          <div class="vision-body">
-            <h3 class="text-center">Integrity</h3>
-            <img class="vision-img-top" src="./assets/inte.png" alt="Card image cap">
-            <p class="vision-text text-center">Delivering <span style="color: #307EFF;">Secure and Transparent
-                services</span> at promising intervals.</p>
-          </div>
-        </div>
-      </div>
-      <div class="vision-vision">
-        <div class="content-vision">
-          <div class="vision-body">
-            <h3 class="text-center">Flexiblity</h3>
-            <img class="vision-img-top" src="./assets/flexi.png" alt="Card image cap">
-            <p class="vision-text text-center">Offer complete solutions to your problems with our best in class <span
-                style="color: #307EFF;">Design strategies</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="vision-vision">
-        <div class="content-vision">
-          <div class="vision-body">
-            <h3 class="text-center">Growth</h3>
-            <img class="vision-img-top" src="./assets/grow.png" alt="Card image cap">
-            <p class="vision-text text-center">We help you <span style="color: #307EFF;">grow your business</span>
-              simply with our industry-leading solutions.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ABOUT US -->
-  <section class="about-section" id="aboutus" style="background-color: #fff;">
-    <div class="about-container">
-      <div class="about">
-        <div class="text-center">
-          <h1 id="shadow-txt" class="contact-text" style="color: black; font-size: 60px; font-family: League;">About <span
-              style="color:#307EFF ;">U</span>s</h1>
-        </div>
-        <div class="pcontent">
-          <p>We are a set of young minds who transformed several real world problems
-            with our
-            innovative promising designs and cool strategic solutions.
-            We have a set of records in acheiving certain heights in design and development with a focused
-            vision.
+      <!-- TAGLINE -->
+      <div id="tagline-section" style="height: 100vh">
+        <div class="tagline">
+          <p>
+            <span class="tag-mid">ENVISION. </span
+            ><span class="tag-mid innovate_txt" >INNOVATE. </span>
+            <span class="tag-mid">TRANSFORM.</span>
           </p>
         </div>
       </div>
-      <div class="image-section">
-        <!-- <img src="images/about.gif" alt="About us Image"> -->
-        <lottie-player src="./assets/about.json" class="lottie" background="transparent" speed="1" style="width: 400px; height: 400px;"
-          loop autoplay></lottie-player>
-      </div>
-      <div class="content-section">
-        <div class="title" style="font-family: League;">
-          <h2>Who are we <span style="color: #307eff; font-weight:bold">?</span></h2>
+    </div>
+    <!-- VISION -->
+    <div class="container-fluid p-5" style="background-color: #d6e6f2">
+      <h1
+        class="text-center mt-3 mb-5"
+        style="font-size: 60px; font-family: League"
+      >
+        Our <span style="color: #307eff">V</span>ision
+      </h1>
+      <div class="container-vision">
+        <div class="vision-vision">
+          <div class="content-vision">
+            <div class="vision-body">
+              <h3 class="text-center">Quality</h3>
+              <img
+                class="vision-img-top"
+                src="./assets/quality.png"
+                alt="Card image cap"
+              />
+              <p class="vision-text text-center">
+                Cutting edge
+                <span style="color: #307eff">Quintessential solutions</span> at
+                the forefront of Technology.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="content">
-          <p class="lead">QuatreLabs is all about creating innovative Digital Solution.
-            We deliver leading Digital solutions for your modern business problems with our best-in class
-            solutions.
-            We want to best serve you and your endeavors through our systematic, technological components
-            that
-            seamlessly blend with your well crafted business ideas.
-            Think of us as the extra nudge to propel your ideas into existence.
-          </p>
-          <!-- <div class="button">
-            <a href="#success">Know More</a>
-          </div> -->
-          <a class="btn btn-outline-primary" id="contactus" href="#success" style="margin: 15px 0px;">Know More</a>
-          <div class='bd'>
-            <div class='social-btn flex-center' id="twitter">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path
-                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-              </svg><span>@QuatreLabs</span>
+        <div class="vision-vision">
+          <div class="content-vision">
+            <div class="vision-body">
+              <h3 class="text-center">Integrity</h3>
+              <img
+                class="vision-img-top"
+                src="./assets/inte.png"
+                alt="Card image cap"
+              />
+              <p class="vision-text text-center">
+                Delivering
+                <span style="color: #307eff"
+                  >Secure and Transparent services</span
+                >
+                at promising intervals.
+              </p>
             </div>
-            <div class='social-btn flex-center' id="linkedin">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path
-                  d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-              </svg><span>in/QuatreLabs</span>
+          </div>
+        </div>
+        <div class="vision-vision">
+          <div class="content-vision">
+            <div class="vision-body">
+              <h3 class="text-center">Flexiblity</h3>
+              <img
+                class="vision-img-top"
+                src="./assets/flexi.png"
+                alt="Card image cap"
+              />
+              <p class="vision-text text-center">
+                Offer complete solutions to your problems with our best in class
+                <span style="color: #307eff">Design strategies</span>
+              </p>
             </div>
-            <div class='social-btn flex-center' id="github">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-              </svg><span>QuatreLabs</span>
+          </div>
+        </div>
+        <div class="vision-vision">
+          <div class="content-vision">
+            <div class="vision-body">
+              <h3 class="text-center">Growth</h3>
+              <img
+                class="vision-img-top"
+                src="./assets/grow.png"
+                alt="Card image cap"
+              />
+              <p class="vision-text text-center">
+                We help you
+                <span style="color: #307eff">grow your business</span> simply
+                with our industry-leading solutions.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- SERVICES -->
-  <section class="services-section" id="services" style="background-color: #fff;">
-    <div class="services-container">
-      <h1 class="text-center" style="font-size: 60px; margin-bottom: 30px; font-family: League;">Our <span
-        style="color:#307EFF ;">S</span>ervices</h1>
-
-      <div class="services-image-web-section">
-        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_xsnsvpbs.json" class="lottie" background="transparent"
-          speed="1" style="width: 400px; height: 400px;" loop autoplay>
-        </lottie-player>
+    <!-- ABOUT US -->
+    <div style="width: 100%; margin-top: 100px" id="aboutus">
+      <div class="about_us_title">
+        <p>About <span style="color: #307eff">U</span>s</p>
       </div>
-
-      <div class="services-content-web-section">
-        <div class="title" style="font-family: League;">
-          <h2>Web App <span style="border-bottom: 2px solid #307eff;">Development</span></h2>
+      <div class="about_us_txt">
+        <p>
+          We are a set of young minds who transformed several real world
+          problems with our innovative promising designs and cool strategic
+          solutions. We have a set of records in acheiving certain heights in
+          design and development with a focused vision.
+        </p>
+      </div>
+      <div class="about_us_container">
+        <div class="about_us_img">
+          <lottie-player
+            src="./assets/about.json"
+            class="lottie"
+            background="transparent"
+            speed="1"
+            style="width: 400px; height: 400px"
+            loop
+            autoplay
+          ></lottie-player>
         </div>
-        <div class="content">
-          <p>Fully customized, intuitive, and feature-rich bespoke web design & development to expand the
-            reach
-            of your
-            business.
-            We build engaging, secure and high performance websites,
-            products and custom web applications using trending technologies
-            and frameworks across platforms.
-            We help you transform your e-commerce organization according to the changing demands in the
-            digital industry, along with increased scalability and productivity.
-          </p>
-        </div>
-        <div class="list">
-          <ul>
-            <li> <span style="color: #307eff; font-weight:bold">
-                &#x3c;</span> Content Mangement System <span style="color: #307eff; font-weight:bold">/>
-              </span> </li>
-            <li> <span style="color: #307eff; font-weight:bold">
-                &#x3c;</span> e-Commerce <span style="color: #307eff; font-weight:bold">/>
-              </span> </li>
-            <li> <span style="color: #307eff; font-weight:bold">
-                &#x3c;</span> Custom Web Application <span style="color: #307eff; font-weight:bold">/>
-              </span> </li>
-
-          </ul>
+        <div class="about_us_content">
+          <div class="who_are_we">
+            <h2>
+              Who are we
+              <span style="color: #307eff; font-weight: bold">?</span>
+            </h2>
+          </div>
+          <div class="who_are_we_txt">
+            <p>
+              QuatreLabs is all about creating innovative Digital Solution. We
+              deliver leading Digital solutions for your modern business
+              problems with our best-in class solutions. We want to best serve
+              you and your endeavors through our systematic, technological
+              components that seamlessly blend with your well crafted business
+              ideas. Think of us as the extra nudge to propel your ideas into
+              existence.
+            </p>
+          </div>
+          <div class="know_more_button">
+            <a
+              class="btn btn-outline-primary"
+              id="contactus"
+              href="#success"
+              style="margin: 15px 0px"
+              >Know More</a
+            >
+          </div>
+          <div class="quatreLab_links">
+            <div class="social-btn flex-center" id="twitter">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                /></svg
+              ><span>@QuatreLabs</span>
+            </div>
+            <div class="social-btn flex-center" id="linkedin">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                /></svg
+              ><span>in/QuatreLabs</span>
+            </div>
+            <div class="social-btn flex-center" id="github">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                /></svg
+              ><span>QuatreLabs</span>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="services-image-mob-section">
-        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_4ayeqfsd.json" class="lottie" background="transparent"
-          speed="1" style="width: 400px; height: 400px;" loop autoplay>
-        </lottie-player>
-      </div>
-
-      <div class="services-content-mob-section"  style="margin-top: 20px;">
-        <div class="title" style="font-family: League;">
-          <h2>Mobile App <span style="border-bottom: 2px solid #307eff;">Development</span></h2>
-        </div>
-        <div class="content">
-          <p>We develop mobile apps compliant with the latest technological standards to ensure the best
-            performance.
-            Designing apps that make smartphones smarter! Making ‘One-Size-Fits-All’ a sensible solution!
-            Architect the Product solution that is modular, well-documented, and developed using responsive
-            code.
-            We drive efficiency with incremental delivery, resulting in accelerated time to market employing
-            our continuous integration and delivery framework.
-          </p>
-        </div>
-        <div class="list">
-          <ul>
-            <li> <span style="color: #307eff; font-weight:bold">
-                &#x3c;</span> Android App Development <span style="color: #307eff; font-weight:bold">/>
-              </span> </li>
-            <li> <span style="color: #307eff; font-weight:bold">
-                &#x3c;</span> Wear Application Development <span style="color: #307eff; font-weight:bold">/>
-              </span> </li>
-            <li> <span style="color: #307eff; font-weight:bold">
-                &#x3c;</span> React Native Development <span style="color: #307eff; font-weight:bold">/>
-              </span> </li>
-          </ul>
-        </div>
-      </div>
-
     </div>
-  </section>
-  <!-- TEAM -->
-  
-    <div class="wrapper p-5" style="background-color: #fff;" id="team">
-      <h1 style="font-family: League;">Our <span style="color: #307EFF;">T</span>eam</h1>
+
+    <!-- <div style="height: 800px; width: 100%; background-color: #307eff"></div>  -->
+
+    <!-- SERVICES -->
+
+    <div class="our_services_container" id="services">
+      <div class="our_services_title">
+        <p>Our <span style="color: #307eff">S</span>ervices</p>
+      </div>
+      <div class="our_services_content">
+        <div class="web_services">
+          <div class="web_services_left">
+            <div class="web_services_title">
+              <h2>
+                Web App
+                <span style="border-bottom: 2px solid #307eff"
+                  >Development</span
+                >
+              </h2>
+            </div>
+
+            <div class="web_services_content">
+              <div class="web_services_txt">
+                <p>
+                  Fully customized, intuitive, and feature-rich bespoke web
+                  design & development to expand the reach of your business. We
+                  build engaging, secure and high performance websites, products
+                  and custom web applications using trending technologies and
+                  frameworks across platforms. We help you transform your
+                  e-commerce organization according to the changing demands in
+                  the digital industry, along with increased scalability and
+                  productivity.
+                </p>
+              </div>
+              <div class="web_services_list">
+                <ul>
+                  <li>
+                    <span style="color: #307eff; font-weight: bold">
+                      &#x3c;</span
+                    >
+                    Content Mangement System
+                    <span style="color: #307eff; font-weight: bold">/> </span>
+                  </li>
+                  <li>
+                    <span style="color: #307eff; font-weight: bold">
+                      &#x3c;</span
+                    >
+                    e-Commerce
+                    <span style="color: #307eff; font-weight: bold">/> </span>
+                  </li>
+                  <li>
+                    <span style="color: #307eff; font-weight: bold">
+                      &#x3c;</span
+                    >
+                    Custom Web Application
+                    <span style="color: #307eff; font-weight: bold">/> </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="web_services_right">
+            <lottie-player
+              src="https://assets8.lottiefiles.com/packages/lf20_xsnsvpbs.json"
+              class="lottie"
+              background="transparent"
+              speed="1"
+              style="width: 400px; height: 400px"
+              loop
+              autoplay
+            >
+            </lottie-player>
+          </div>
+        </div>
+        <div class="mobile_services">
+          <div class="mobile_services_left">
+            <lottie-player
+              src="https://assets7.lottiefiles.com/packages/lf20_4ayeqfsd.json"
+              class="lottie"
+              background="transparent"
+              speed="1"
+              style="width: 400px; height: 400px"
+              loop
+              autoplay
+            >
+            </lottie-player>
+          </div>
+          <div class="mobile_services_right">
+            <div class="mobile_services_title">
+              <h2>
+                Mobile App
+                <span style="border-bottom: 2px solid #307eff"
+                  >Development</span
+                >
+              </h2>
+            </div>
+            <div class="mobile_services_content">
+              <div class="mobile_services_txt">
+                <p>
+                  We develop mobile apps compliant with the latest technological
+                  standards to ensure the best performance. Designing apps that make
+                  smartphones smarter! Making ‘One-Size-Fits-All’ a sensible
+                  solution! Architect the Product solution that is modular,
+                  well-documented, and developed using responsive code. We drive
+                  efficiency with incremental delivery, resulting in accelerated
+                  time to market employing our continuous integration and delivery
+                  framework.
+                </p>
+              </div>
+              <div class="mobile_services_list">
+                <ul>
+                  <li>
+                    <span style="color: #307eff; font-weight: bold"> &#x3c;</span>
+                    Android App Development
+                    <span style="color: #307eff; font-weight: bold">/> </span>
+                  </li>
+                  <li>
+                    <span style="color: #307eff; font-weight: bold"> &#x3c;</span>
+                    Wear Application Development
+                    <span style="color: #307eff; font-weight: bold">/> </span>
+                  </li>
+                  <li>
+                    <span style="color: #307eff; font-weight: bold"> &#x3c;</span>
+                    React Native Development
+                    <span style="color: #307eff; font-weight: bold">/> </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TEAM -->
+
+    <div class="wrapper p-5" style="background-color: #fff" id="team">
+      <h1 style="font-family: League">
+        Our <span style="color: #307eff">T</span>eam
+      </h1>
       <div class="our_team m-5">
         <div class="team_member">
           <div class="member_img">
-            <img src="./team/nithesh.jpg" alt="our_team">
+            <img src="./team/nithesh.jpg" alt="our_team" />
             <div class="social_media">
-              <a class="linkedin item" href="https://www.linkedin.com/in/nithesh-k-g-b44334152/"><i class="fab fa-linkedin-in"></i></a>
-              <a class="twitter item" href="https://twitter.com/Nitheshney"><i class="fab fa-twitter"></i></a>
-              <a class="instagram item" href="https://www.instagram.com/nithesh_wayne_/"><i class="fab fa-instagram"></i></a>
+              <a
+                class="linkedin item"
+                href="https://www.linkedin.com/in/nithesh-k-g-b44334152/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a class="twitter item" href="https://twitter.com/Nitheshney"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="instagram item"
+                href="https://www.instagram.com/nithesh_wayne_/"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
           </div>
           <h3>Nithesh K G</h3>
           <span>NEO</span>
-
         </div>
         <div class="team_member">
           <div class="member_img">
-            <img src="./team/rahul.jpg" alt="our_team">
+            <img src="./team/rahul.jpg" alt="our_team" />
             <div class="social_media">
-              <a class="linkedin item" href="https://www.linkedin.com/in/rahul-suresh30/" ><i class="fab fa-linkedin-in"></i></a>
-              <a class="twitter item" href="https://twitter.com/rah_Dong" ><i class="fab fa-twitter"></i></a>
-              <a class="instagram item" href="https://www.instagram.com/rah_dong/"><i class="fab fa-instagram"></i></a>
+              <a
+                class="linkedin item"
+                href="https://www.linkedin.com/in/rahul-suresh30/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a class="twitter item" href="https://twitter.com/rah_Dong"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="instagram item"
+                href="https://www.instagram.com/rah_dong/"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
           </div>
           <h3>Rahul S</h3>
           <span>REO</span>
-
         </div>
         <div class="team_member">
           <div class="member_img">
-            <img src="./team/raj.jpg" alt="our_team">
+            <img src="./team/raj.jpg" alt="our_team" />
             <div class="social_media">
-              <a class="linkedin item" href="https://www.linkedin.com/in/rajprabhakar-balasubramaniam-486848125/" ><i class="fab fa-linkedin-in"></i></a>
-              <a class="twitter item" href="https://twitter.com/RajPrabhakar184" ><i class="fab fa-twitter"></i></a>
-              <a class="instagram item" href="https://www.instagram.com/raj_prabhakar/"><i class="fab fa-instagram"></i></a>
+              <a
+                class="linkedin item"
+                href="https://www.linkedin.com/in/rajprabhakar-balasubramaniam-486848125/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a class="twitter item" href="https://twitter.com/RajPrabhakar184"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="instagram item"
+                href="https://www.instagram.com/raj_prabhakar/"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
           </div>
           <h3>RajPrabhakar B</h3>
           <span>REO</span>
-
         </div>
         <div class="team_member">
           <div class="member_img">
-            <img src="./team/praveen.jpeg" alt="our_team">
+            <img src="./team/praveen.jpeg" alt="our_team" />
             <div class="social_media">
-              <a class="linkedin item" href="https://www.linkedin.com/in/praveen-m-1435a3162" ><i class="fab fa-linkedin-in"></i></a>
+              <a
+                class="linkedin item"
+                href="https://www.linkedin.com/in/praveen-m-1435a3162"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
               <!-- <a class="twitter item" href="#" ><i class="fab fa-twitter"></i></a> -->
-              <a class="instagram item" href="https://www.instagram.com/_bozz_lightyear_/"><i class="fab fa-instagram"></i></a>
+              <!-- <a class="instagram item" href="https://www.instagram.com/_bozz_lightyear_/"><i class="fab fa-instagram"></i></a>-->
             </div>
           </div>
           <h3>Praveen M</h3>
           <span>PEO</span>
-
         </div>
         <div class="team_member">
           <div class="member_img">
-            <img src="./team/sunny.jpg" alt="our_team">
+            <img src="./team/sunny.jpg" alt="our_team" />
             <div class="social_media">
-              <a class="linkedin item" href="https://www.linkedin.com/in/sundeep-dayalan/" ><i class="fab fa-linkedin-in"></i></a>
-              <a class="twitter item" href="https://twitter.com/Sundeep_DS" ><i class="fab fa-twitter"></i></a>
-              <a class="instagram item" href="https://www.instagram.com/sundeep_dayalan/"><i class="fab fa-instagram"></i></a>
+              <a
+                class="linkedin item"
+                href="https://www.linkedin.com/in/sundeep-dayalan/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a class="twitter item" href="https://twitter.com/Sundeep_DS"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="instagram item"
+                href="https://www.instagram.com/sundeep_dayalan/"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
           </div>
           <h3>Sundeep D</h3>
@@ -343,126 +587,191 @@
         </div>
       </div>
     </div>
-<!-- SUCCESS STORY -->
-    <section class="about-section" id="success" style="background-color:#fff;">
+    <!-- SUCCESS STORY -->
+     <section class="about-section" id="success" style="background-color: #fff">
       <div class="about-container">
         <div class="about">
           <div class="text-center">
-            <h1 id="shadow-txt" class="contact-text" style="color: black; font-size: 60px; font-family: League;">Success <span
-                style="color:#307EFF ;">S</span>tories</h1>
+            <h1
+              id="shadow-txt"
+              class="contact-text"
+              style="color: black; font-size: 60px; font-family: League"
+            >
+              Success <span style="color: #307eff">S</span>tories
+            </h1>
           </div>
         </div>
-        <div class="image-section-story pt-5">
-          <lottie-player src="./assets/badge.json" background="transparent" class="lottie" speed="1" style="width: 400px; height: 400px;"
-            loop autoplay></lottie-player>
+        <div class="image-section-story">
+          <lottie-player
+            src="./assets/badge.json"
+            background="transparent"
+            class="lottie"
+            speed="1"
+            style="width: 400px; height: 400px"
+            loop
+            autoplay
+          ></lottie-player>
         </div>
         <div class="content-section-story">
           <div class="content">
-            <p class="lead" id="national"><span style="font-weight: bold; font-size: 30px; font-family: League;">Nationwide Hackathons</span> </p>
-            <br>
-            <p>
-              <span style="font-weight: bold; font-family: League;">Smart India Hackathon 2019 - Winner</span>
-              <br>
-              Maruti Suzuki - Developed a smart traffic controller module to control the real time traffic on promise using bay detection on lanes with the help of CCTV’s footage placed in the junction. In addition to that, We have developed some additional features like Pothole detection module, Ambulance Tracking Module which will be incorporated into the car’s dashboard display to make the user feel at ease.
-            <br>
-            <br>
-            <span style="font-weight: bold; font-family: League;">Smart India Hackathon 2018 - 1st Runner up</span><br>
-              CSIR - A smart efficient home controller module which helps to control the entire home across the global.
-            With the use of minimal hardware and leading tech stuffs we incorporated everything under one module and made it cost efficient. 
-            <br>
-            <br>
-            <span style="font-weight: bold; font-family: League;">Rajasthan Digifest Hackathon - Best Innovator Team (By Yourstory)</span><br>
-              Featured in a great motivational startup which encourages other startups to evolve out in the market and awarded as best innovator team for building a cost efficient Smart home under the tagline “Why smart cities why not Smart Huts!”.
+            <p class="lead" id="national">
+              <span
+                style="font-weight: bold; font-size: 30px; font-family: League"
+                >Nationwide Hackathons</span
+              >
             </p>
-   
+            <br />
+            <p>
+              <span style="font-weight: bold; font-family: League"
+                >Smart India Hackathon 2019 - Winner</span
+              >
+              <br />
+              Maruti Suzuki - Developed a smart traffic controller module to
+              control the real time traffic on promise using bay detection on
+              lanes with the help of CCTV’s footage placed in the junction. In
+              addition to that, We have developed some additional features like
+              Pothole detection module, Ambulance Tracking Module which will be
+              incorporated into the car’s dashboard display to make the user
+              feel at ease.
+              <br />
+              <br />
+              <span style="font-weight: bold; font-family: League"
+                >Smart India Hackathon 2018 - 1st Runner up</span
+              ><br />
+              CSIR - A smart efficient home controller module which helps to
+              control the entire home across the global. With the use of minimal
+              hardware and leading tech stuffs we incorporated everything under
+              one module and made it cost efficient.
+              <br />
+              <br />
+              <span style="font-weight: bold; font-family: League"
+                >Rajasthan Digifest Hackathon - Best Innovator Team (By
+                Yourstory)</span
+              ><br />
+              Featured in a great motivational startup which encourages other
+              startups to evolve out in the market and awarded as best innovator
+              team for building a cost efficient Smart home under the tagline
+              “Why smart cities why not Smart Huts!”.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </section> 
 
     <!-- Contact Us Section -->
-  <section class="contact-section p-5" id="contact" style="background-color: #ffffff;">
-    <div class="contact-container">
+   <section
+      class="contact-section p-5"
+      id="contact"
+      style="background-color: #ffffff"
+    >
+      <div class="contact-container">
+        <div class="shadow-container-contact text-center">
+          <div class="wrapper">
+            <h1
+              id="shadow-txt"
+              class="contact-text"
+              style="color: black; font-family: League"
+            >
+              Contact <span style="color: #307eff">U</span>s
+            </h1>
+          </div>
+        </div>
 
-      <div class="shadow-container-contact text-center ">
-        <div class="wrapper">
-          <h1 id="shadow-txt" class="contact-text" style="color: black; font-family: League;">Contact <span
-              style="color:#307EFF ;">U</span>s</h1>
+        <div class="content-section-contact">
+          <div class="title pb-4">
+            <h1>
+              Let<span style="color: #307eff">'</span>s Connect<span
+                style="color: #307eff"
+                >.</span
+              >
+            </h1>
+          </div>
+          <div id="contact-form">
+            <div class="form-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="contact-name"
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="contact-email"
+                placeholder="Your email Address"
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                id="contact-message"
+                rows="2"
+                placeholder="How can we help you :)"
+              ></textarea>
+              <input type="checkbox" class="form-check-input" id="check" />
+              <small
+                >Dont forget to check me for receiving our updates in
+                mail.</small
+              >
+              <br /><br />
+              <small id="error" style="color: crimson"></small>
+            </div>
+            <button
+              id="contact-submit"
+              onclick="saveContact()"
+              class="btn btn-primary"
+            >
+              Send Message
+            </button>
+          </div>
+        </div>
+
+        <div class="image-section-contact">
+          <img src="./assets/mail.gif" alt="Contact us Image" />
+        </div>
+      </div>
+    </section> 
+    <!-- Footer Section -->
+     <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4>QuatreLabs</h4>
+            <ul>
+              <li><a href="#aboutus">about us</a></li>
+              <li><a href="#services">services</a></li>
+              <li><a href="#">privacy policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Web App Development</a></li>
+              <li><a href="#services">Mobile App Development</a></li>
+            </ul>
+          </div>
+          <div class="footer-col"></div>
+          <div class="footer-col footer-col-social">
+            <h4>Follow us</h4>
+            <div class="footer-social-links">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="content-section-contact">
-        <div class="title pb-4">
-          <h1>Let<span style="color:#307EFF">'</span>s Connect<span style="color:#307EFF">.</span></h1>
-        </div>
-        <div id="contact-form">
-          <div class="form-group mb-3">
-            <input type="text" class="form-control" id="contact-name" placeholder="Your Name" >
-          </div>
-          <div class="mb-3">
-            <input type="email" class="form-control" id="contact-email" placeholder="Your email Address">
-          </div>
-          <div class="mb-3">
-            <textarea class="form-control" id="contact-message" rows="2" placeholder="How can we help you :)"></textarea>
-            <input type="checkbox" class="form-check-input" id="check">
-            <small>Dont forget to check me for receiving our updates in mail.</small>
-            <br><br>
-            <small id="error" style="color: crimson;"></small>
-          </div>
-          <button id="contact-submit" onclick="saveContact()" class="btn btn-primary">Send Message</button>
-        </div>
+      <div class="container">
+        <p class="copyrights">
+          Copyright © 2021 QuatreLabs. All Rights Reserved.
+        </p>
       </div>
-
-      <div class="image-section-contact">
-        <img src="./assets/mail.gif" alt="Contact us Image">
-          </div>
-
-    </div>
-
-  </section>
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-row">
-        <div class="footer-col">
-          <h4>QuatreLabs</h4>
-          <ul>
-            <li><a href="#aboutus">about us</a></li>
-            <li><a href="#services">services</a></li>
-            <li><a href="#">privacy policy</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Web Application Development</a></li>
-            <li><a href="#services">Mobile App Development</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-
-        </div>
-        <div class="footer-col footer-col-social">
-          <h4>Follow us</h4>
-          <div class="footer-social-links">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <p class="copyrights">Copyright © 2021 QuatreLabs. All Rights Reserved.</p>
-    </div>
-
-  </footer>
-  <script src="./contact.js"></script>
-  <script type="module" src="./main.js"></script>
-  
-
-</body>
-
+    </footer> 
+    <script src="./contact.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
