@@ -79,10 +79,14 @@ canvas {
 
 @media only screen  and (min-width : 1224px) {
   /* Styles */
+
+  .tag-mid{
+    font-size: 33px;
+  }
   
 .innovate_txt
 {
-  color: black;
+  color: white;
 }
 
   }
@@ -1159,18 +1163,14 @@ ul {
     width: 50%;
     margin-bottom: 30px;
   }
+  .copyrights{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media (max-width: 574px) {
   .footer-col {
     width: 100%;
   }
-}
-
-/* Desktops and laptops ----------- */
-@media screen and (max-width: 1280px) and (max-height: 800px) {
-}
-
-/* Large screens ----------- */
-@media only screen and (min-width: 1824px) {
-  /* Styles */
 }
