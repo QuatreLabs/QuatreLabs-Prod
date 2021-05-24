@@ -50,21 +50,13 @@ scene.add(mesh);
 
 // ROTATION CONTROL
 
-let fromRotation = new THREE.Quaternion();
-fromRotation.copy(mesh.quaternion);
-
-let toRotation = new THREE.Quaternion();
-const axisNormalised = new THREE.Vector3(0, 1, 0).normalize();
-const angle = 1;
-toRotation.setFromAxisAngle(axisNormalised, angle);
-
-let angle1 = 0;
+var axis = new THREE.Vector3(0, 1, 0).normalize();
+var speed = 0.002;
 
 function update() {
-  const percent = Math.abs(angle1);
-  angle1 += 0.001;
-
-  THREE.Quaternion.slerp(fromRotation, toRotation, mesh.quaternion, percent);
+  if (mesh) {
+    mesh.rotateOnAxis(axis, speed);
+  }
 }
 
 // LIGHTING
