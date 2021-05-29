@@ -34,7 +34,9 @@ function saveContact() {
         document.getElementById("contact-submit").style.backgroundColor = "green";
         document.getElementById("contact-submit").style.fontWeight = "bold";
         document.getElementById("contact-submit").style.color="white";
+        backTotext();
       }
+
 
       //window.location.href = "#contact-submit";
       document.getElementById("contact-name").value = "";
@@ -72,7 +74,8 @@ function sendNotification() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("notify").innerHTML = "Thankyou!"
+        document.getElementById("notify").innerHTML = "Thankyou!";
+        backTotext();
       }
  
       document.getElementById("email").value = ""; 
@@ -119,4 +122,14 @@ function callContact(){
   document.getElementById("contact-email").value = mail;
   document.getElementById("hidden").style.display = "none";
   document.getElementById("contactus").style.display="block";
+}
+
+
+function backTotext(){
+  setTimeout(()=> {
+    document.getElementById("contact-submit").innerHTML = "Send Message";
+    document.getElementById("notify").innerHTML = "Get Notified";
+    document.getElementById("contact-submit").style.backgroundColor = "#307EFF";
+    document.getElementById("contact-submit").style.color="white";
+  }, 5000)
 }
