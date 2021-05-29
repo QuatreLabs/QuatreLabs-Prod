@@ -77,30 +77,38 @@ canvas {
 }
 
 
-@media only screen  and (min-width : 1224px) {
-  /* Styles */
-
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 990px) {
   .tag-mid{
-    font-size: 33px;
+    font-size: 22px;
+    font-weight: 800;
   }
-  
+.innovate_txt
+{
+  color: white;
+  font-weight: 800;
+}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1350px) {
+  .tag-mid{
+    font-size: 30px;
+  }
 .innovate_txt
 {
   color: white;
 }
+}
 
-  }
-  
   /* Large screens ----------- */
-  @media only screen  and (min-width : 1824px) {
-  /* Styles */
-  
+@media only screen  and (min-width : 1824px) {
 .innovate_txt
 {
   color: white;
 }
+}
 
-  }
 /* NAVBAR */
 
 nav {
@@ -135,9 +143,9 @@ nav {
   }
 
   .tagline {
-    font-size: 50px;
-    top: 38%;
-    letter-spacing: 5px;
+    font-size: 40px;
+    top: 35%;
+    letter-spacing: 8px;
     left: 0%;
     transform: translate(-0%, -0%);
     padding-top: 0;
