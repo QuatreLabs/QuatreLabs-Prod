@@ -144,7 +144,7 @@ nav {
 
   .tagline {
     font-size: 40px;
-    top: 35%;
+    top: 50%;
     letter-spacing: 8px;
     left: 0%;
     transform: translate(-0%, -0%);
@@ -400,6 +400,7 @@ background-image: linear-gradient(180deg, #0061FF, white);
   color: black;
   font-size: 60px;
   font-family: League;
+  padding: 50px;
 }
 
 .web_services {
@@ -430,7 +431,7 @@ background-image: linear-gradient(180deg, #0061FF, white);
   font-size: 1.25rem;
   font-style: normal;
   font-family: "Montserrat", sans-serif;
-  width: 85%;
+  width: 90%;
   text-align: justify;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -728,6 +729,10 @@ background-image: linear-gradient(180deg, #0061FF, white);
 @media screen and (max-width: 900px) {
   .services-section {
     height: max-content;
+  }
+
+  .our_services_title{
+    font-size: 45px;
   }
 
   .services-content-web-section {
