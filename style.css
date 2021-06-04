@@ -1180,6 +1180,18 @@ ul {
   color: white;
 }
 
+/* MODAL */
+.modal-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-body{
+  font-size: 1rem;
+  font-style: normal;
+  font-family: "Montserrat", sans-serif;
+}
+
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;

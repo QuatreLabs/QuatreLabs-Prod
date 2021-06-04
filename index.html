@@ -22,6 +22,8 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -71,6 +73,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#team">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal" data-toggle="tooltip" title="Launching Soon!!">Products <i class="fas fa-spinner" style="color: #307eff;"></i></a>  
               </li>
             </ul>
             <!-- <button class="btn btn-outline-primary" type="submit">Get in Touch</button> -->
@@ -154,6 +159,38 @@
           <audio id="audio" src="./assets/click.wav"></audio>
         </div>
       </div>
+
+      <!-- Modal -->
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Launching Soon!! 🚀</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="color: #307eff;"><i class="far fa-times-circle"></i></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-text">
+          We are working hard on our products and will be launched soon!. Until then we are ready to serve your Business Problems with our Digital Solutions.
+        </div>
+        <div>
+          <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_upeczmrx.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop autoplay></lottie-player>
+        </div>
+      </div>
+      <div class="modal-footer" class="modal-text">
+        <a type="button" class="btn btn-outline-primary" data-dismiss="modal">Thank You!</a>
+      </div>
+    </div>
+  </div>
+</div>
 
       <!-- TAGLINE -->
       <div id="tagline-section" style="height: 100vh">
@@ -800,6 +837,21 @@
         </p>
       </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+
+      function ds(){
+        alert("We are working hard on our products and will be launched soon!. Until then we are ready to serve your Business problems with our digital solutions.")
+      }
+      </script>
     <script src="./contact.js"></script>
     <script type="module" src="./main.js"></script>
   </body>
