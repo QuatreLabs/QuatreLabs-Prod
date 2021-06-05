@@ -134,10 +134,18 @@ function backTotext(){
 }
 
 // Chat Window
+var bot_url = "https://rasachatbotqlnlu.herokuapp.com/webhooks/rest/webhook";
+var aloha = false;
+
 $(document).ready(function () {
   $(".chat_on").click(function () {
     $(".Layout").toggle();
     $(".chat_on").hide(300);
+    if(aloha==false) {
+      createmsg("Hello! My name is Quat.","bot");
+      createmsg("May I know yours ?", "bot");
+      aloha=true
+    }
   });
 
   $(".chat_close_icon").click(function () {
@@ -147,34 +155,32 @@ $(document).ready(function () {
 
 });
 
-var bot_url = "https://rasachatbotqlnlu.herokuapp.com/webhooks/rest/webhook";
-
 function chatClick() {
-  var inText = document.createElement("input");
-  inText.type = "text";
-  inText.classList.add("bot_message");
-  inText.value = document.getElementById("chat_message").value;
-
-  var parent = document.getElementById("chat_message_list");
-  parent.appendChild(inText);
-
-  document.getElementById("chat_message").value = "";
+  createmsg(document.getElementById("chat_message").value, "user");
 
   const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message: inText.value, sender: "client", })
+    body: JSON.stringify({ message: document.getElementById("chat_message").value, sender: "client", })
   };
   fetch(bot_url, requestOptions)
         .then(response => response.json())
         .then(data => data.forEach((datamsg) => (
-          createmsg(datamsg.text)
+          createmsg(datamsg.text,"bot")
         )));
+
+  document.getElementById("chat_message").value = "";
 }
 
-function createmsg(msg) {
+
+function createmsg(msg,user) {
   var inText = document.createElement("input");
   inText.type = "text";
+  if(user=="bot") {
+    inText.style ="margin: 2px; padding:5px 12px; border-radius:15px; border-color:#307eff;";
+  } else {
+    inText.style ="margin: 2px; padding:5px 12px; border-radius:15px; border-color:#dedede;";
+  }
   inText.classList.add("bot_message");
   inText.value = msg;
 

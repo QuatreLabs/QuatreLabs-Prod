@@ -20,15 +20,15 @@
 .chat_on {
     position: fixed;
     z-index: 10;
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
     right: 15px;
-    bottom:20px;
-    background-color: #8a57cf;
+    bottom:25px;
+    background-color: #3074ff;
     color: #fff;
     border-radius: 50%;
     text-align: center;
-    padding: 9px;
+    padding: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
     cursor: pointer;
     display: block;
@@ -164,7 +164,7 @@
  align-items:center;
  padding-left:10px;
  padding-right:40px;
- height:40px;
+ height:60px;
  -webkit-flex-shrink:0;
  -ms-flex-negative:0;
  flex-shrink:0
@@ -182,7 +182,7 @@
 
 #Smallchat .Messenger_prompt {
  margin:0;
- font-size:16px;
+ font-size:18px;
  line-height:18px;
  font-weight:400;
  overflow:hidden;
@@ -315,5 +315,5 @@
     transition: all .1s ease-in-out;
 }
 #Smallchat .Input-emoji .Input_button-emoji .Icon path, #Smallchat .Input_button:hover .Icon path {
-    fill: #2c2c46;
+    fill: #307EFF;
 }
