@@ -41,7 +41,17 @@
     <title>QuatreLabs</title>
   </head>
 
-  <body>
+  <body onload="vanish()">
+
+    <!--Pre - Loader -->
+    <div id="loader">
+      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_x62chJ.json"  background="transparent"  speed="1"  style="width: 500px; height: 500px;"  loop autoplay></lottie-player>
+    </div>
+
+    <!-- ScroolToTop -->
+    <div class="scrollToTop" onclick="scrollToTop()">
+    </div>
+
     <div id="app">
       <!-- NAVBAR -->
       <nav
@@ -838,7 +848,7 @@
       </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
@@ -848,9 +858,24 @@
         $('[data-toggle="tooltip"]').tooltip();
       });
 
-      function ds(){
-        alert("We are working hard on our products and will be launched soon!. Until then we are ready to serve your Business problems with our digital solutions.")
+      window.addEventListener("scroll", function(){
+        var scroll = document.querySelector(".scrollToTop");
+        scroll.classList.toggle("active", window.scrollY > 700);
+      });
+
+      function scrollToTop(){
+        window.scrollTo({
+          top:0,
+          behavior:"smooth"
+        })
       }
+
+    var loader = document.getElementById("loader");
+    function vanish(){
+    loader.style.display = "none";
+}
+
+
       </script>
     <script src="./contact.js"></script>
     <script type="module" src="./main.js"></script>
