@@ -40,6 +40,19 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuatreLabs</title>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DJSS0N5PBL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DJSS0N5PBL');
+</script>
+
+
   </head>
 
   <body onload="vanish()">
@@ -57,7 +70,7 @@
                 </div>
               </div>
               <div class="Input Input-blank">
-
+                <form onSubmit="return false;">
                 <input type="text" id="chat_message" class="Input_field" placeholder="How can I help you.." style="height: 20px;">
                 <!-- <button class="Input_button Input_button-emoji">
                   <div class="Icon" style="width: 18px; height: 18px;">
@@ -71,7 +84,7 @@
                     </svg>
                   </div>
                 </button> -->
-                <button class="Input_button Input_button-send" onclick="chatClick()">
+                <button type="submit" class="Input_button Input_button-send" onclick="chatClick()">
                   <div class="Icon" style="width: 15px; height: 55px;">
                     <!-- <svg width="57px" height="54px" viewBox="1496 193 57 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 18px; height: 18px;">
                       <g id="Group-9-Copy-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1523.000000, 220.000000) rotate(-270.000000) translate(-1523.000000, -220.000000) translate(1499.000000, 193.000000)">
@@ -81,6 +94,7 @@
                     <span><i class="far fa-paper-plane text-primary"></i></span>
                   </div>
                 </button>
+              </form>
               </div>
             </div>
           </div>

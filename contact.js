@@ -156,6 +156,9 @@ $(document).ready(function () {
 });
 
 function chatClick() {
+
+  if(document.getElementById("chat_message").value != ''){
+
   createmsg(document.getElementById("chat_message").value, "user");
 
   const requestOptions = {
@@ -170,20 +173,26 @@ function chatClick() {
         )));
 
   document.getElementById("chat_message").value = "";
+
+        }
 }
 
 
 function createmsg(msg,user) {
-  var inText = document.createElement("input");
-  inText.type = "text";
-  if(user=="bot") {
-    inText.style ="margin: 2px; padding:5px 12px; border-radius:15px; border-color:#307eff;";
-  } else {
-    inText.style ="margin: 2px; padding:5px 12px; border-radius:15px; border-color:#dedede;";
-  }
-  inText.classList.add("bot_message");
-  inText.value = msg;
+  if( msg !=''){
+    var inText = document.createElement("input");
+    inText.type = "text";
+    if(user=="bot") {
+      inText.style ="margin: 2px; padding:5px 12px; border-radius:15px; border-color:#307eff;";
+    } else {
+      inText.style ="margin: 2px; padding:5px 12px; border-radius:15px; border-color:orange;";
+    }
+    inText.classList.add("bot_message");
+    inText.value = msg;
+
+
 
   var parent = document.getElementById("chat_message_list");
   parent.appendChild(inText);
+  }
 }
