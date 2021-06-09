@@ -178,21 +178,41 @@ function chatClick() {
 }
 
 
-function createmsg(msg,user) {
-  if( msg !=''){
-    var inText = document.createElement("input");
-    inText.type = "text";
-    if(user=="bot") {
-      inText.style ="margin: 2px; padding:5px 12px; border-radius:15px; border-color:#307eff;";
-    } else {
-      inText.style ="margin: 2px; padding:5px 12px; border-radius:15px; border-color:orange;";
+// function createmsg(msg,user) {
+//   if( msg !=''){
+//     var inText = document.createElement("input");
+//     inText.type = "text";
+//     if(user=="bot") {
+//       inText.style ="margin: 2px; padding:5px 12px; border-radius:15px; border-color:#307eff;";
+//     } else {
+//       inText.style ="margin: 2px; padding:5px 12px; border-radius:15px; border-color:orange;";
+//     }
+//     inText.classList.add("bot_message");
+//     inText.value = msg;
+
+
+
+//   var parent = document.getElementById("chat_message_list");
+//   parent.appendChild(inText);
+//   }
+// }
+
+function createmsg(msg, user) {
+ 
+
+  if (msg != "") {
+    var inText = document.createElement("div");
+
+    console.log(msg);
+
+    if (user == "bot") {
+      inText.innerHTML = `<div style="color:black;display:flex;width:100%;justify-content: flex-start"><div  class="message_thread_bot">${msg}<div></div>`;
+    }else
+    {
+      inText.innerHTML =` <div style="color:black;display:flex;width:100%;justify-content: flex-end"><div class="message_thread_user">${msg}<div></div>`; 
     }
-    inText.classList.add("bot_message");
-    inText.value = msg;
 
-
-
-  var parent = document.getElementById("chat_message_list");
-  parent.appendChild(inText);
+    var parent = document.getElementById("chat_message_list");
+    parent.appendChild(inText);
   }
 }
