@@ -134,7 +134,7 @@ function backTotext(){
 }
 
 // Chat Window
-var bot_url = "https://rasachatbotqlnlu.herokuapp.com/webhooks/rest/webhook";
+var bot_url = "https://qlrasachatbotv1.herokuapp.com/webhooks/rest/webhook";
 var aloha = false;
 
 $(document).ready(function () {
@@ -143,7 +143,7 @@ $(document).ready(function () {
     $(".chat_on").hide(300);
     if(aloha==false) {
       createmsg("Hello! My name is Quat.","bot");
-      createmsg("May I know yours ?", "bot");
+      createmsg("How can I help you ?", "bot");
       aloha=true
     }
   });
