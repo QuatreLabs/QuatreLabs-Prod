@@ -216,3 +216,5 @@ function createmsg(msg, user) {
     parent.appendChild(inText);
   }
 }
+
+

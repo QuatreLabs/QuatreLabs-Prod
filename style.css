@@ -126,6 +126,9 @@ canvas {
   color: white;
   font-weight: 800;
 }
+#success{
+  margin-bottom: 200px !important;
+}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -136,6 +139,9 @@ canvas {
 .innovate_txt
 {
   color: white;
+}
+#success{
+  margin-bottom: 180px !important;
 }
 }
 
@@ -968,6 +974,11 @@ background-image: linear-gradient(180deg, #0061FF, white);
 }
 
 @media screen and (max-width: 768px) {
+
+  #success{
+    margin-bottom: 30px !important;
+  }
+
   .about_us_container {
     flex-direction: column;
   }
@@ -1131,6 +1142,10 @@ background-image: linear-gradient(180deg, #0061FF, white);
     display: block;
     display: none;
   }
+  .accolades h1{
+    align-content: center;
+    margin-left: 10px;
+  }
 }
 
 /* FOOTER */
@@ -1252,4 +1267,79 @@ ul {
   .footer-col {
     width: 100%;
   }
+}
+
+
+/* Counter CSS */
+.counter-section i {
+  display: block;
+  margin: 0 0 10px
+}
+
+.counter-section span.counter {
+  font-size: 40px;
+  color: #000;
+  line-height: 60px;
+  display: block;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px
+}
+
+.counter-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase
+}
+
+.counter-icon {
+  top: 25px;
+  position: relative
+}
+
+.counter-style2 .counter-title {
+  letter-spacing: 0.55px;
+  float: left
+}
+
+.counter-style2 span.counter {
+  letter-spacing: 0.55px;
+  float: left;
+  margin-right: 10px
+}
+
+.counter-style2 i {
+  float: right;
+  line-height: 26px;
+  margin: 0 10px 0 0
+}
+
+.counter-subheadline span {
+  float: right
+}
+
+.medium-icon {
+  font-size: 40px !important;
+  margin-bottom: 15px !important
+}
+
+
+.card{
+  background-color: #fff !important;
+  border-radius: 30px !important;
+  border: none !important;
+  padding: 10px;
+  box-shadow: 5px 5px 15px #ffffff,
+                        5px 5px 15px rgba(0, 0, 0, .16) !important;
+  
+}
+
+.card:hover{
+  transition: 2s;
+  /* transform: perspective(200px)  rotate(2deg) */
+
+}
+
+.card-footer{
+  text-align: right;
+  background-color: #fff !important;
 }
