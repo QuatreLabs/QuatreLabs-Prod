@@ -1333,6 +1333,10 @@ ul {
   
 }
 
+.card img{
+  object-fit: contain;
+}
+
 .card:hover{
   transition: 2s;
   /* transform: perspective(200px)  rotate(2deg) */
