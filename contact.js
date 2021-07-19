@@ -134,7 +134,7 @@ function backTotext(){
 }
 
 // Chat Window
-var bot_url = "http://qlrasachatbotv2.herokuapp.com/webhooks/rest/webhook";
+var bot_url = "https://qlrasachatbotv2.herokuapp.com/webhooks/rest/webhook";
 var aloha = false;
 
 $(document).ready(function () {
