@@ -142,8 +142,8 @@ $(document).ready(function () {
     $(".Layout").toggle();
     $(".chat_on").hide(300);
     if(aloha==false) {
-      createmsg("Hello! My name is Quat.","bot");
-      createmsg("How can I help you ?", "bot");
+      createmsg("Hello😊 Welcome to QuatreLabs!","bot");
+      createmsg("I'm Quat, QuatreLabs's bot", "bot");
       aloha=true
     }
   });
@@ -156,11 +156,8 @@ $(document).ready(function () {
 });
 
 function chatClick() {
-
   if(document.getElementById("chat_message").value != ''){
-
   createmsg(document.getElementById("chat_message").value, "user");
-
   const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -171,10 +168,8 @@ function chatClick() {
         .then(data => data.forEach((datamsg) => (
           createmsg(datamsg.text,"bot")
         )));
-
-  document.getElementById("chat_message").value = "";
-
-        }
+        document.getElementById("chat_message").value = "";
+  }
 }
 
 
@@ -189,29 +184,21 @@ function chatClick() {
 //     }
 //     inText.classList.add("bot_message");
 //     inText.value = msg;
-
-
-
 //   var parent = document.getElementById("chat_message_list");
 //   parent.appendChild(inText);
 //   }
 // }
 
 function createmsg(msg, user) {
- 
-
   if (msg != "") {
     var inText = document.createElement("div");
-
-    console.log(msg);
-
+    //console.log(msg);
     if (user == "bot") {
       inText.innerHTML = `<div style="color:black;display:flex;width:100%;justify-content: flex-start"><div  class="message_thread_bot">${msg}<div></div>`;
     }else
     {
       inText.innerHTML =` <div style="color:black;display:flex;width:100%;justify-content: flex-end"><div class="message_thread_user">${msg}<div></div>`; 
     }
-
     var parent = document.getElementById("chat_message_list");
     parent.appendChild(inText);
   }
