@@ -201,6 +201,7 @@ function createmsg(msg, user) {
     }
     var parent = document.getElementById("chat_message_list");
     parent.appendChild(inText);
+    inText.scrollIntoView();
   }
 }
 
